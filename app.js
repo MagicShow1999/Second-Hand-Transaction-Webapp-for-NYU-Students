@@ -43,3 +43,4 @@ app.use('/category', categoryRouter)
 server.listen(4000, () => {
     console.log("secondhand server started");
 })
+

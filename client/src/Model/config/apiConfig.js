@@ -4,7 +4,10 @@
  *  If we have the header, just pass in the header
  */
 import Header from "./headerConfig";
-const BASE_URL = "http://localhost:4000";
+const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "http://secondhand-env-1.eba-9y4hftqv.us-east-1.elasticbeanstalk.com"
+    : "http://localhost:4000";
 const createAPI = (endpoint) => `${BASE_URL}${endpoint}`;
 
 const GET_LISTING = createAPI("/listings");
